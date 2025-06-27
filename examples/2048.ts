@@ -7,6 +7,11 @@ async function example() {
     env: "LOCAL",
     verbose: 1,
     domSettleTimeoutMs: 100,
+    // Use Groq instead of OpenAI
+    modelName: "groq-llama-3.3-70b-versatile",
+    modelClientOptions: {
+      apiKey: process.env.GROQ_API_KEY,
+    },
   });
   try {
     console.log("🌟 Initializing Stagehand...");
